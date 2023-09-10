@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import List from "../List/List";
+import React from "react";
 
 export default function Todo({ todo, onUpdate, onDelete }) {
   const { id, text, status } = todo;
@@ -9,18 +8,11 @@ export default function Todo({ todo, onUpdate, onDelete }) {
   };
   const handleDelete = () => onDelete(todo);
   return (
-    <div>
+    
       <li>
-        <input
-          id={id}
-          type="checkbox"
-          checked={status === "completed"}
-          onChange={handleChange}
-        />
-        {/* id는 input이랑 html을 연결하기위한 장치이기 떄문에 같은 값을 넣어준다. */}
+        <input type="checkbox" id={id} checked={status === "completed"} onChange={handleChange} />
         <label htmlFor={id}>{text}</label>
         <button onClick={handleDelete}>Del</button>
       </li>
-    </div>
   );
 }

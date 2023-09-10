@@ -10,7 +10,7 @@ export default function List({onAdd}) {
       setText('')
       return;
     }
-    onAdd({id: uuidv4() , text: text, status : "active"})
+    onAdd({id: uuidv4() , text, status: "active"})
     setText('')
   } 
   const handleChange = (e) => setText(e.target.value)

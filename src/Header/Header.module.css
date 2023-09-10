@@ -1,0 +1,9 @@
+header{
+  background-color: var(--header-color);
+  width: 20rem;
+  height: 4rem;
+}
+.filter {
+  display: flex;
+  justify-content: end;
+}
